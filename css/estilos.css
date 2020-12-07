@@ -1,23 +1,125 @@
-.container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 5px;
-    justify-content: center;
+.header {
+  height: 65px;
+  display: grid;
+  grid-template-columns: 1fr 368px 180px;
+  padding: 0 10px;
+  border-bottom: 1px solid #efefef;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  z-index: 1;
 }
-.item{
-    border-radius: 5px;
-    padding: 10px;
-    background: #f2f2f2;
+
+.logo {
+  fill: #e60023;
+  padding: 10px;
+  border-radius: 50%;
 }
-.item img{
-    max-width: 100%;
+
+.logo:hover,
+.menu a:hover {
+  background: #f2f2f2;
 }
-.level-1{
-    grid-row-end: span 3;
+
+.col-1,
+.col-2,
+.menu,
+.col-3 {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: space-around;
 }
-.level-2{
-    grid-row-end: span 2;
+
+.col-1 a {
+  text-decoration: none;
 }
-.level-3{
-    grid-row-end: span 1;
+
+.col-1 input[type="text"] {
+  width: 90%;
+  height: 30px;
+  padding: 7px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1em;
+  border-radius: 10px;
+  background: #efefef;
+  color: #333;
+  border: none;
+  outline: none;
+}
+
+.col-1 input[type="text"]:focus {
+  box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.5);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: #8e8e8e;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a img {
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.border {
+  border-right: 2px solid #efefef;
+  padding-right: 20px;
+}
+
+.menu .selected {
+  color: #211922;
+}
+
+.col-3 {
+  font-size: 20px;
+}
+
+main {
+  margin-top: 85px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+.item {
+  border-radius: 20px;
+  padding: 5px;
+  background: #f2f2f2;
+}
+.item img {
+  border-radius: 20px;
+  max-width: 100%;
+}
+.level-1 {
+  grid-row-end: span 3;
+}
+.level-2 {
+  grid-row-end: span 2;
+}
+.level-3 {
+  grid-row-end: span 1;
 }
