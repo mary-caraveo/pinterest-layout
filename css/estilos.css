@@ -99,6 +99,11 @@ main {
   margin-top: 85px;
 }
 
+.fa-user-circle:before {
+  content: "\f2bd";
+  padding-right: 15px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
