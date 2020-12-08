@@ -68,16 +68,11 @@
   color: #8e8e8e;
   text-decoration: none;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 20%;
   height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.menu a img {
-  height: 25px;
-  border-radius: 50%;
   margin-right: 10px;
   vertical-align: top;
 }
@@ -110,15 +105,7 @@ main {
   grid-gap: 5px;
   justify-content: center;
 }
-.item {
-  border-radius: 20px;
-  padding: 5px;
-  background: #f2f2f2;
-}
-.item img {
-  border-radius: 20px;
-  max-width: 100%;
-}
+
 .level-1 {
   grid-row-end: span 3;
 }
@@ -127,4 +114,83 @@ main {
 }
 .level-3 {
   grid-row-end: span 1;
+}
+
+.post {
+  border-radius: 15px;
+  cursor: zoom-in;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+.post:hover .overlay {
+  display: block;
+}
+
+.post .overlay a {
+  text-decoration: none;
+  position: absolute;
+}
+
+.btnSave {
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  padding: 10px;
+  background: #e60023;
+  border-radius: 12px;
+}
+
+.btnPage {
+  bottom: 10px;
+  left: 10px;
+  background: #f2f2f2;
+  color: #585858;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.btnShare,
+.btnMore {
+  color: #585858;
+  background: #f2f2f2;
+  padding: 8px 8px;
+  border-radius: 50%;
+}
+
+.btnShare {
+  bottom: 10px;
+  right: 10px;
+}
+
+.btnMore {
+  bottom: 10px;
+  right: 50px;
+}
+
+.postImage {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.postImage img {
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
