@@ -1,11 +1,12 @@
 * {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   height: 65px;
   display: grid;
-  grid-template-columns: 1fr 368px 180px;
+  grid-template-columns: 368px 1fr 250px;
   padding: 0 10px;
   border-bottom: 1px solid #efefef;
   position: fixed;
@@ -17,13 +18,12 @@
 
 .logo {
   fill: #e60023;
-  padding: 10px;
-  border-radius: 50%;
 }
 
 .logo:hover,
 .menu a:hover {
-  background: #f2f2f2;
+  background: #020101;
+  color: white;
 }
 
 .col-1,
@@ -33,35 +33,34 @@
   display: flex;
   height: inherit;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .col-1 a {
   text-decoration: none;
 }
 
-.col-1 input[type="text"] {
-  width: 90%;
-  height: 30px;
+.col-2 input[type="text"] {
+  height: 35px;
   padding: 7px;
-  font-family: "Roboto";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1em;
-  border-radius: 10px;
+  border-radius: 25px;
   background: #efefef;
   color: #333;
   border: none;
   outline: none;
+  width: 100%;
+  margin: 10px;
 }
 
-.col-1 input[type="text"]:focus {
+.col-2 input[type="text"]:focus {
   box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.5);
 }
 
 .menu {
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 .menu li {
@@ -72,12 +71,11 @@
   color: #8e8e8e;
   text-decoration: none;
   padding: 10px;
-  border-radius: 20%;
-  height: 25px;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  margin: 10px;
   vertical-align: top;
 }
 
@@ -88,25 +86,22 @@
 
 .menu .selected {
   color: #211922;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .col-3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 main {
   margin-top: 85px;
 }
 
-.fa-user-circle:before {
-  content: "\f2bd";
-  padding-right: 15px;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  grid-gap: 5px;
+  grid-gap: 10px;
   justify-content: center;
   padding-bottom: 10px;
 }
@@ -198,28 +193,6 @@ main {
   width: 100%;
   object-fit: cover;
   border-radius: 15px;
-}
-
-.footer-pinteres {
-  background-color: #8e8e8e;
-}
-
-.footer-pinteres a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-pinteres li {
-  list-style: none;
-}
-
-.list-footer {
-  padding: 10px;
-  height: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
 }
 
 @media (max-width: 575.98px) {
