@@ -7,7 +7,6 @@
   height: 65px;
   display: grid;
   grid-template-columns: 368px 1fr 250px;
-  padding: 0 10px;
   border-bottom: 1px solid #efefef;
   position: fixed;
   width: 100%;
@@ -42,7 +41,7 @@
 
 .col-2 input[type="text"] {
   height: 35px;
-  padding: 7px;
+  padding: 7px 7px 7px 25px;
   font-weight: 500;
   font-size: 1em;
   border-radius: 25px;
@@ -56,6 +55,7 @@
 
 .col-2 input[type="text"]:focus {
   box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.5);
+  font-family: "FontAwesome", "Source Sans Pro";
 }
 
 .menu {
@@ -109,9 +109,11 @@ main {
 .level-1 {
   grid-row-end: span 3;
 }
+
 .level-2 {
   grid-row-end: span 2;
 }
+
 .level-3 {
   grid-row-end: span 1;
 }
@@ -196,9 +198,62 @@ main {
 }
 
 @media (max-width: 575.98px) {
+  .header {
+    grid-template-columns: repeat(auto-fill, 194px);
+    grid-auto-rows: minmax(1fr, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .col-2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .col-2 input[type="text"] {
+    padding: 7px;
+    width: 150px;
+    height: 15px;
+    margin: 4px;
+  }
+
+  .col-3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 10px 10px 10px;
+  }
+
+  .menu .selected {
+    font-size: 16px;
+  }
+
+  .col-3 .menu a {
+    margin: 2px;
+    padding: 5px;
+  }
+
+  .col-2,
+  .col-3 {
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 30px 0 0 30px;
+    justify-content: space-around;
+  }
+
+  .col-3 {
+    border-radius: 0 30px 30px 0;
+  }
+
+  .col-3 a {
+    color: white;
   }
 }
