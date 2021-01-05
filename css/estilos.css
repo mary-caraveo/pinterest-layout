@@ -203,6 +203,8 @@ main {
     grid-auto-rows: minmax(1fr, 1fr);
     justify-content: center;
     align-items: center;
+    height: 40px;
+    grid-row-gap: 5px;
   }
 
   .col-1 {
@@ -217,7 +219,6 @@ main {
 
   .col-2 input[type="text"] {
     padding: 7px;
-    width: 150px;
     height: 15px;
     margin: 4px;
   }
@@ -230,7 +231,7 @@ main {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 10px 10px 10px;
+    padding: 5px 10px 10px 10px;
   }
 
   .menu .selected {
@@ -240,6 +241,7 @@ main {
   .col-3 .menu a {
     margin: 2px;
     padding: 5px;
+    color: white;
   }
 
   .col-2,
@@ -251,9 +253,5 @@ main {
 
   .col-3 {
     border-radius: 0 30px 30px 0;
-  }
-
-  .col-3 a {
-    color: white;
   }
 }
